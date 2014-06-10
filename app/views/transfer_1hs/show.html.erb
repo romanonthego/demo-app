@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @transfer_1h.id %>
+</p>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @transfer_1h.sender_id %>
+</p>
+
+<p>
+  <strong>Reciever:</strong>
+  <%= @transfer_1h.reciever_id %>
+</p>
+
+<p>
+  <strong>Ammount:</strong>
+  <%= @transfer_1h.ammount %>
+</p>
+
+<p>
+  <strong>Payout:</strong>
+  <%= @transfer_1h.payout %>
+</p>
+
+<p>
+  <strong>Starts at:</strong>
+  <%= @transfer_1h.starts_at %>
+</p>
+
+<%= link_to 'Edit', edit_transfer_1h_path(@transfer_1h) %> |
+<%= link_to 'Back', transfer_1hs_path %>

@@ -1,0 +1,37 @@
+<h1>Listing transfer_1hs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Sender</th>
+      <th>Reciever</th>
+      <th>Ammount</th>
+      <th>Payout</th>
+      <th>Starts at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transfer_1hs.each do |transfer_1h| %>
+      <tr>
+        <td><%= transfer_1h.id %></td>
+        <td><%= transfer_1h.sender_id %></td>
+        <td><%= transfer_1h.reciever_id %></td>
+        <td><%= transfer_1h.ammount %></td>
+        <td><%= transfer_1h.payout %></td>
+        <td><%= transfer_1h.starts_at %></td>
+        <td><%= link_to 'Show', transfer_1h %></td>
+        <td><%= link_to 'Edit', edit_transfer_1h_path(transfer_1h) %></td>
+        <td><%= link_to 'Destroy', transfer_1h, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transfer 1h', new_transfer_1h_path %>

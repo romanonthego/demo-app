@@ -1,0 +1,41 @@
+<%= form_for(@transfer_1h) do |f| %>
+  <% if @transfer_1h.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transfer_1h.errors.count, "error") %> prohibited this transfer_1h from being saved:</h2>
+
+      <ul>
+      <% @transfer_1h.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :sender_id %><br>
+    <%= f.number_field :sender_id %>
+  </div>
+  <div class="field">
+    <%= f.label :reciever_id %><br>
+    <%= f.number_field :reciever_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ammount %><br>
+    <%= f.text_field :ammount %>
+  </div>
+  <div class="field">
+    <%= f.label :payout %><br>
+    <%= f.text_field :payout %>
+  </div>
+  <div class="field">
+    <%= f.label :starts_at %><br>
+    <%= f.datetime_select :starts_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

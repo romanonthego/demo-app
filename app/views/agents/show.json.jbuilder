@@ -1,0 +1,1 @@
+json.extract! @agent, :id, :id, :name, :created_at, :updated_at
